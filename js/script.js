@@ -82,10 +82,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
         showLoading("#main-content");
         $ajaxUtils.sendGetRequest(
             allCategoriesUrl,
-            function (responseText) {
-                document.querySelector("#main-content")
-                    .innerHTML = responseText;
-            },, // ***** <---- TODO: STEP 1: Substitute [...] ******
+            buildAndShowHomeHTML// ***** <---- TODO: STEP 1: Substitute [...] ******
             true); // Explicitely setting the flag to get JSON from server processed into an object literal
     });
     // *** finish **
@@ -114,6 +111,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
                 // Hint: you need to surround the chosen category short name with something before inserting
                 // it into the home html snippet.
                 //
+                chosenCategoryShortName="'"+chosenCategoryShortName+"'";
                 var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",chosenCategoryShortName);
 
 
