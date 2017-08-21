@@ -54,7 +54,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
         // Add 'active' to menu button if not already there
         classes = document.querySelector("#navMenuButton").className;
-        if (classes.indexOf("active") === -1) {
+        if (classes.indexOf("active") == -1) {
             classes += " active";
             document.querySelector("#navMenuButton").className = classes;
         }
@@ -112,7 +112,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
                 // it into the home html snippet.
                 //
                 chosenCategoryShortName="'"+chosenCategoryShortName+"'";
-                var homeHtmlToInsertIntoMainPage = insertProperty(homeHtmlUrl,"randomCategoryShortName",chosenCategoryShortName);
+                var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,"randomCategoryShortName",chosenCategoryShortName);
 
 
                 // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
